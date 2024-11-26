@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fefeff;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container .card .imgbx {
+  width: 110vh;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .content {
+  position: absolute;
+  bottom: -162px;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  transition: bottom 0.5s;
+  transition-delay: 0.8s;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.container .content .contentbx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .content .sci {
+  position: relative;
+  bottom: 10px;
+  display: flex;
+}
+.container .content .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.2 * var(--i));
+}
+.container .content .sci li a {
+  color: white;
+  font-size: 24px;
+}
+.container:hover .content {
+  bottom: 0px;
+  transition-delay: 0s;
+}
+.container .content .contentbx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 15px;
+  line-height: 1.1em;
+  transition: 0.5s;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition-delay: 0.6s;
+}
+.container:hover .content .contentbx h3 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.container:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}/*# sourceMappingURL=Style.css.map */
